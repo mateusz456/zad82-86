@@ -1,63 +1,14 @@
-<SCRIPT LANGUAGE="Javascript1.2">
-
-var currentsec=0; 
-var currentmin=0; 
-var currentmil=0;
-var keepgoin=false;  
-function timer(){
- if(keepgoin){
-  currentmil+=1;  
-   if (currentmil==10){  
-    currentmil=0;  
-    currentsec+=1; 
+<html>
+ <head>
+  <title> Zad84 </title>
+  <script language="JavaScript">
+   function wit_start()
+   {
+    start_wit = new Date();
+    poczatek_wit=stat_wit.getTime()
    }
-   if (currentsec==60){ 
-    currentsec=0;  
-    currentmin+=1;  
-   }
-  Strsec=""+currentsec;  
-  Strmin=""+currentmin;  
-  Strmil=""+currentmil;  
-   if (Strsec.length!=2){ 
-    Strsec="0"+currentsec; 
-   }    
-   if (Strmin.length!=2){ /
-    Strmin="0"+currentmin;
-   }
-  document.display.seconds.value=Strsec  
-  document.display.minutes.value=Strmin; 
-  document.display.milsecs.value=Strmil;
-  setTimeout("timer()", 100); 
- }
-}
-function startover(){  
-keepgoin=false;   
-currentsec=0;
-currentmin=0;
-currentmil=0;
-Strsec="00";
-Strmin="00";
-Strmil="00";
-}
-
-</SCRIPT>
-
-<FORM NAME="display" ONRESET="startover()">
-<center>
-<TABLE BORDER=1 BGCOLOR="#FFFFFF">
-<TR><TD BGCOLOR="#FFFFFF" COLSPAN=3>
-<DIV STYLE="font-size:10px;font-family:LCD,Sans Serif;color:#FFFFFF">
- <INPUT TYPE="text" NAME="minutes" VALUE="00" SIZE=1 STYLE="height:30px;">:
-<INPUT TYPE="text" NAME="seconds" VALUE="00" SIZE=1 STYLE="height:30px;">
-
-<INPUT TYPE="text" NAME="milsecs" VALUE="0" SIZE=1 STYLE="height:30px;">
-</TD></TR><TR><TD CELLPADDING=1>
-<INPUT TYPE="button" NAME="start" VALUE="Start" ONCLICK="keepgoin=true;timer()">
-</TD><TD>
-<INPUT TYPE="button" NAME="pause" VALUE="Pause" ONCLICK="keepgoin=false;">
-</TD><TD>
-<INPUT TYPE="reset" NAME="reset" VALUE="Reset">
-
-</TD></TR></TABLE>
-</center>
-</FORM>
+   function wit_stop()
+   {
+    stop_wit = new Date();
+    koniec_wit=stop_wit.getTime()
+    roznica_wit=koniec_wit-poczatek_wit
