@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+ <textarea rows=25 cols=90>
+<html>
+ <head>
+  <title> Zad84 </title>
+  <script language="JavaScript">
+   function wit_start()
+   {
+    start_wit = new Date();
+    poczatek_wit=stat_wit.getTime()
+   }
+   function wit_stop()
+   {
+    stop_wit = new Date();
+    koniec_wit=stop_wit.getTime()
+    roznica_wit=koniec_wit-poczatek_wit
+    pokaz1.innerHTML=roznica_wit/1000+"s";
+   }
+  </script>
+  <style>
+  </style>
+  </head>
+  <body>
+   <script language="JavaScript">
+    dzis_wit=new Date();
+    document.write("Aktualny czas: ",dzis_wit.getHours(),":",dzis_wit.getMinutes());
+    </script>
+   <form>
+<input type="button" name="Button1" value="START stoper" onclick="wit_start()">
+<input type="button" name="Button1" value="STOP stoper" onclick="wit_stop()">
+<br>
+<table border="4px">
+    <br>
+ <tr id="pokaz1"></tr>
+</table>
+</form>
+</body> 
+</html>
+   </div>
+</body>
+ </textarea>
+</html>
