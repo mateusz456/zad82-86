@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+ <textarea rows=25 cols=90>
+<html> 
+<head> 
+<title> Zad 86 </title>
+ <script language="JavaScript">
+function Przycisk1_wit()
+{
+pokaz1.innerHTML="Ostatnio zmodyfikowany : "+document.lastModified;
+}
+function Przycisk2_wit()
+{
+    dzis = new Date();
+    mon=dzis.getMonth()+1;
+    dzien=dzis.getDate();
+rok=dzis.getFullYear();
+pokaz2.innerHTML="<br>Aktualna data : "+dzien+"."+mon+"."+rok;
+}
+function Przycisk3_wit()
+{
+    min=dzis.getMinutes();
+    godz=dzis.getHours();
+pokaz3.innerHTML="<br>Aktualna godzina : "+godz+":"+min;
+}
+
+ </script>
+ <style>
+
+ </style>
+ </head>
+<body>
+    <form>
+        <a onclick="Przycisk1_wit('')">
+        <img src="ak1.png" alt="Przycisk1" border="0"
+        onmouseover="this.src = 'ak1_2.png'"
+        onmouseout="this.src ='ak1.png'" /></a>
+        <br>
+        <a onclick="Przycisk2_wit('')">
+            <img src="ak2.png" alt="Przycisk2" border="0"
+            onmouseover="this.src = 'ak2_2.png'"
+            onmouseout="this.src ='ak2.png'" /></a>
+            <br>
+            <a onclick="Przycisk3_wit('')">
+                <img src="ak3.png" alt="Przycisk3" border="0"
+                onmouseover="this.src = 'ak3_2.png'"
+                onmouseout="this.src ='ak3.png'" /></a>
+        </form>
+        <table>
+            <tr id="pokaz1"></tr>
+            <tr id="pokaz2"></tr>
+            <tr id="pokaz3"></tr>
+        </table>
+
+</body> 
+</html>
+   </div>
+</body>
+ </textarea>
+</html>
